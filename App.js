@@ -1,12 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { StyleSheet, View } from 'react-native';
+import Products from './src/components/Products/Products';
+import ModalComponent from './src/components/ModalComponent/ModalComponent';
+import { DataProvider } from './src/components/Context/DataContext';
 export default function App() {
   return (
+    <DataProvider>
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Products/>
+      <ModalComponent/>
     </View>
+    </DataProvider>
   );
 }
 
